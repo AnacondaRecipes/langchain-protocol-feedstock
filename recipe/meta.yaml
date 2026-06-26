@@ -1,5 +1,5 @@
 {% set name = "langchain-protocol" %}
-{% set version = "0.0.15" %}
+{% set version = "0.0.18" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 9ab2d11ee73944754f10e037e717098d3a6796f0e58afa9cadda6154e7655ade
+  sha256: ec3e11782f1ed0c9db38e5a9ed01b0e7a0d3fba406faa8aef6594b73c56a63e6
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
     - hatchling
   run:
     - python
-    - typing_extensions >=4.7.0,<5.0.0
+    - typing_extensions >=4.13.0,<5.0.0
 
 test:
   imports:
