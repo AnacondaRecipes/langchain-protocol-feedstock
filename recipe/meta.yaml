@@ -1,13 +1,13 @@
 {% set name = "langchain-protocol" %}
-{% set version = "0.0.18" %}
+{% set version = "0.0.20" %}
 
 package:
-  name: {{ name|lower }}
+  name: {{ name }}
   version: {{ version }}
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name|replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: ec3e11782f1ed0c9db38e5a9ed01b0e7a0d3fba406faa8aef6594b73c56a63e6
+  sha256: 0f5bd002474265648e91161771a9e0438fe9480bd55a416e51af0f60070637ec
 
 build:
   number: 0
@@ -18,7 +18,7 @@ requirements:
   host:
     - python
     - pip
-    - hatchling
+    - hatchling >=1.26,<1.30
   run:
     - python
     - typing_extensions >=4.13.0,<5.0.0
